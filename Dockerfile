@@ -10,7 +10,6 @@ RUN cd backend && npm ci --omit=dev
 COPY backend backend
 
 ENV NODE_ENV=production
-ENV PORT=8080
 EXPOSE 8080
 
 # Start the backend
