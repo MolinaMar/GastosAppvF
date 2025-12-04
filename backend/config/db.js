@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 const connectDB = async () => {
   const uri = process.env.MONGO_URI
   if (!uri) {
-    console.error('MONGO_URI is not set')
-    process.exit(1)
+    console.error('MONGO_URI is not set, iniciando sin conexión a MongoDB')
+    return
   }
   try {
     await mongoose.connect(uri, { dbName: 'gastosdbv2' })
