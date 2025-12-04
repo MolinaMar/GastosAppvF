@@ -20,6 +20,11 @@ app.get('/', (req, res) => {
   res.send('Backend funcionando correctamente')
 })
 
+// Healthcheck
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' })
+})
+
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log("Servidor corriendo en puerto " + PORT);
